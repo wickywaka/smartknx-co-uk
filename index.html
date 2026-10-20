@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartKNX | Gohar Rashid, Freelance KNX Programmer, Northwich</title>
+<meta name="description" content="Freelance KNX programmer and smart-building project manager based in Northwich, serving Manchester and the North West. ETS design, programming and commissioning for homeowners, KNX installers and integrators across the UK. Control4, DALI and BACnet integration.">
+<meta property="og:title" content="SmartKNX | Gohar Rashid, Freelance KNX Programmer">
+<meta property="og:url" content="https://smartknx.co.uk/">
+<link rel="canonical" href="https://smartknx.co.uk/">
+<meta property="og:description" content="KNX design, ETS programming and commissioning for homes, commercial buildings and the trades who build them.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark-a.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "SmartKNX",
+  "founder": {"@type": "Person", "name": "Gohar Rashid"},
+  "url": "https://smartknx.co.uk/",
+  "description": "KNX design, ETS programming, commissioning and integration for residential and commercial buildings.",
+  "email": "contact@smartknx.co.uk",
+  "telephone": "+44 7446 488542",
+    "address": {"@type": "PostalAddress", "addressLocality": "Northwich", "addressCountry": "GB"},
+  "areaServed": ["Northwich", "Manchester", "Cheshire", "United Kingdom"],
+  "sameAs": ["https://www.linkedin.com/in/knx-certified-engineer", "https://www.youtube.com/@KNX-expert"]
+}
+</script>
+<style>
+  :root {
+    --ink: #2d3748;
+    --ink-2: #4a5568;
+    --muted: #718096;
+    --paper: #f8fafc;
+    --card: #ffffff;
+    --line: #e2e8f0;
+    --deep: #2d3748;
+    --deep-2: #4a5568;
+    --accent: #667eea;
+    --accent-ink: #ffffff;
+    --accent-soft: #ebf0ff;
+    --accent-deep: #5a67d8;
+    --grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --on-grad: #e9e6ff;
+    --on-dark: #cbd5e0;
+    --radius: 14px;
+    --max: 1120px;
+    --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--font); color: var(--ink); background: var(--paper); line-height: 1.6; font-size: 17px; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  .eyebrow { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  h1, h2, h3 { line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(36px, 5.5vw, 60px); font-weight: 700; }
+  h2 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 700; }
+  h3 { font-size: 20px; font-weight: 600; }
+  p { margin: 0 0 16px; }
+  section { padding: 88px 0; }
+  .lead { font-size: 20px; color: var(--ink-2); max-width: 680px; }
+
+  /* Header */
+  header.top { position: sticky; top: 0; z-index: 20; background: rgba(45,55,72,.96); backdrop-filter: blur(8px); color: #fff; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 16px; }
+  .brand { font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .brand .mark { width: 30px; height: 30px; }
+  .brand span { font-weight: 500; }
+  .brand b { font-weight: 800; }
+  .brand .dot { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: var(--mono); font-size: 13px; }
+  nav.links { display: flex; gap: 24px; font-size: 15px; }
+  nav.links a { text-decoration: none; opacity: .85; }
+  nav.links a:hover { opacity: 1; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 16px; border: 2px solid transparent; transition: transform .15s ease, background .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-accent { background: var(--grad); color: var(--accent-ink); }
+  .btn-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+  .btn-dark { background: var(--deep); color: #fff; }
+  .top .btn { padding: 9px 16px; font-size: 14px; }
+  .top .btn-accent { background: #fff; color: var(--accent-deep); }
+  .top .btn-accent:hover { background: var(--accent-soft); }
+  @media (max-width: 820px) { nav.links { display: none; } }
+
+  /* Hero */
+  .hero { background: var(--grad); color: #fff; padding: 96px 0 104px; position: relative; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px); background-size: 22px 22px; mask-image: linear-gradient(90deg, transparent 30%, #000 100%); pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.35fr 1fr; gap: 56px; align-items: center; }
+  .hero .lead { color: var(--on-grad); }
+  .hero .eyebrow, .contact .eyebrow { color: #fff; opacity: .85; }
+  .hero .btn-accent, .contact .ways ~ * .btn-accent, .videos .btn-accent { background: #fff; color: var(--accent-deep); }
+  .videos .eyebrow { color: #a3bffa; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .paths { display: grid; gap: 12px; }
+  .path { display: block; text-decoration: none; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); border-radius: var(--radius); padding: 18px 24px; transition: background .15s ease, transform .15s ease; }
+  .path:hover { background: rgba(255,255,255,.18); transform: translateY(-2px); }
+  .path .who { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--on-grad); margin-bottom: 8px; }
+  .path b { display: block; font-size: 20px; line-height: 1.3; margin-bottom: 12px; }
+  .path .go { display: inline-block; background: #fff; color: var(--accent-deep); font-weight: 600; font-size: 15px; padding: 10px 18px; border-radius: 999px; }
+  @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } }
+
+  /* Services grid */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+
+  /* Why SmartKNX */
+  .why { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+  .why div { border-top: 3px solid; border-image: var(--grad) 1; padding-top: 18px; }
+  .why p { color: var(--ink-2); font-size: 16px; margin: 0; }
+  @media (max-width: 900px) { .why { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .why { grid-template-columns: 1fr; } }
+  .svc { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .svc .ico { width: 42px; height: 42px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; margin-bottom: 16px; }
+  .svc .ico svg { width: 22px; height: 22px; stroke: var(--accent-deep); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .svc p { color: var(--ink-2); font-size: 16px; margin: 0; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+  /* Chips */
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .chip { font-family: var(--mono); font-size: 14px; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); }
+
+  /* Videos */
+  .videos { background: var(--deep); color: #fff; }
+  .videos .lead { color: var(--on-dark); }
+  .vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 40px 0 32px; }
+  .vid { text-decoration: none; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); overflow: hidden; transition: transform .15s ease; }
+  .vid:hover { transform: translateY(-2px); }
+  .vid .thumb { aspect-ratio: 16/9; background: #0d1a22 center/cover no-repeat; position: relative; }
+  .vid .thumb::after { content: ""; position: absolute; inset: 0; margin: auto; width: 54px; height: 38px; border-radius: 10px; background: rgba(0,0,0,.6) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 7l8 5-8 5z' fill='white'/%3E%3C/svg%3E") center/22px no-repeat; }
+  .vid .t { padding: 14px 16px 18px; font-size: 15px; font-weight: 500; }
+  @media (max-width: 900px) { .vgrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .vgrid { grid-template-columns: 1fr; } }
+
+
+  /* Labels & tick lists */
+  .tag { display: inline-block; font-family: var(--mono); font-size: 12px; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); margin-bottom: 14px; }
+  ul.ticks { list-style: none; padding: 0; margin: 0 0 20px; }
+  ul.ticks li { padding-left: 28px; position: relative; margin-bottom: 10px; color: var(--ink-2); }
+  ul.ticks li::before { content: ""; position: absolute; left: 0; top: 7px; width: 14px; height: 8px; border-left: 2.5px solid var(--accent); border-bottom: 2.5px solid var(--accent); transform: rotate(-45deg); }
+
+  /* Services extras */
+  .works { display: flex; align-items: center; gap: 18px; margin-top: 36px; flex-wrap: wrap; }
+  .works-label { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .works .chips { margin: 0; }
+  .trade { margin-top: 48px; background: var(--deep); color: #fff; border-radius: var(--radius); padding: 36px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; }
+  .trade p, .trade li { color: var(--on-dark); }
+  .trade .tag { background: rgba(255,255,255,.1); color: #a3bffa; }
+  .trade ul.ticks { margin: 0; }
+  .trade ul.ticks li { color: var(--on-dark); }
+  @media (max-width: 820px) { .trade { grid-template-columns: 1fr; } }
+  .about .why { grid-column: 1 / -1; margin-top: 56px; }
+
+  /* About */
+  .about .wrap:first-child { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
+  .avatar { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; margin-bottom: 24px; box-shadow: 0 14px 36px rgba(102,126,234,.35); }
+  .me p:not(.eyebrow) { color: var(--ink-2); font-size: 18px; }
+  ol.career { list-style: none; margin: 0; padding: 0 0 0 28px; border-left: 2px solid var(--line); }
+  ol.career li { position: relative; padding: 0 0 22px; display: grid; grid-template-columns: 110px 1fr; column-gap: 16px; }
+  ol.career li:last-child { padding-bottom: 0; }
+  ol.career li::before { content: ""; position: absolute; left: -36px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); border: 3px solid var(--accent); }
+  ol.career .when { font-family: var(--mono); font-size: 13px; color: var(--muted); padding-top: 3px; grid-row: span 2; }
+  ol.career b { font-weight: 600; }
+  ol.career span:last-child { color: var(--ink-2); font-size: 15px; }
+  @media (max-width: 820px) { .about .wrap:first-child { grid-template-columns: 1fr; gap: 40px; } }
+
+  /* Contact */
+  .contact { background: var(--grad); color: #fff; }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .contact .lead { color: var(--on-grad); }
+  .steps-line { color: #fff; font-weight: 500; border-left: 3px solid rgba(255,255,255,.5); padding-left: 14px; }
+  .ways { display: grid; gap: 12px; margin-top: 24px; }
+  .way { display: flex; align-items: center; gap: 14px; text-decoration: none; padding: 16px 18px; border-radius: var(--radius); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); }
+  .way:hover { background: rgba(255,255,255,.1); }
+  .way small { display: block; color: var(--on-grad); font-size: 13px; }
+  form { background: var(--card); color: var(--ink); border-radius: var(--radius); padding: 28px; }
+  label { display: block; font-size: 14px; font-weight: 600; margin: 0 0 6px; }
+  input, select, textarea { width: 100%; font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--ink); margin-bottom: 16px; }
+  textarea { min-height: 120px; resize: vertical; }
+  form .btn { width: 100%; justify-content: center; border: 0; cursor: pointer; }
+  .note { font-size: 14px; color: var(--muted); margin: 12px 0 0; min-height: 1em; }
+  .note.ok { color: #2f855a; font-weight: 600; }
+  .note.err { color: #c53030; font-weight: 600; }
+  .hp { position: absolute; left: -9999px; }
+  @media (max-width: 900px) { .contact .wrap { grid-template-columns: 1fr; } }
+
+  footer { background: #1a202c; color: #a0aec0; font-size: 14px; padding: 28px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer a { color: #e2e8f0; }
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#667eea"/><stop offset="1" stop-color="#764ba2"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><path d="M43 20.5c-2.6-2.6-6.4-3.9-10.6-3.9-6.6 0-11.4 3.5-11.4 8.7 0 11.6 22.6 6.6 22.6 18 0 5.6-5 9-11.8 9-4.6 0-8.6-1.6-11.3-4.4" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><circle cx="44.5" cy="19" r="5.2" fill="#6f6fd8" stroke="#fff" stroke-width="3.2"/><circle cx="19" cy="49.4" r="5.2" fill="#7058b8" stroke="#fff" stroke-width="3.2"/></svg><span>Smart<b>KNX</b></span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#trade">For installers</a>
+      <a href="#videos">Tutorials</a>
+      <a href="#about">About me</a>
+    </nav>
+    <a class="btn btn-accent" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Freelance KNX Programmer · Northwich &amp; Manchester</p>
+        <h1>KNX design, programming and commissioning.</h1>
+        <p class="lead">Smart homes and buildings, designed and programmed by a certified KNX Partner with 10+ years' experience.</p>
+      </div>
+      <div class="paths" aria-label="How can I help?">
+        <a class="path" href="#contact">
+          <span class="who">Homeowners</span>
+          <b>Planning a smart home?</b>
+          <span class="go">Book a free consultation →</span>
+        </a>
+        <a class="path" href="#contact">
+          <span class="who">Existing KNX systems</span>
+          <b>Something not working as it should?</b>
+          <span class="go">Book a repair visit →</span>
+        </a>
+        <a class="path" href="#contact">
+          <span class="who">Installers &amp; integrators</span>
+          <b>Need a KNX programmer for your job?</b>
+          <span class="go">Book me for a job →</span>
+        </a>
+</div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">What I do</p>
+      <h2>Every part of a KNX building.</h2>
+      <div class="grid">
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
+          <h3>Lighting control</h3>
+          <p>Switching, dimming, DALI, colour temperature and RGB, presence and daylight control, scenes.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 4h18M5 4v16M19 4v16M5 8h14M5 12h14M5 16h14"/></svg></div>
+          <h3>Blinds &amp; curtains</h3>
+          <p>Motorised blinds, shutters with slat control, curtains, and sun and wind protection logic.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M14 14.8V4a2 2 0 1 0-4 0v10.8a4 4 0 1 0 4 0z"/></svg></div>
+          <h3>Heating &amp; HVAC</h3>
+          <p>Room temperature control, underfloor heating, fan coils and ventilation, all from one schedule.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>Energy metering</h3>
+          <p>Electricity, water and heat metering brought onto the bus for monitoring and reporting.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h6M17 14l3 3-3 3"/></svg></div>
+          <h3>Logic &amp; scenes</h3>
+          <p>Logic modules from ABB, Zennio and MDT for the behaviour your client actually asked for.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div>
+          <h3>Integration</h3>
+          <p>KNX connected to the AV, security and building-management systems around it, with one joined-up control.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Security &amp; access</h3>
+          <p>Smart locks, intercoms, cameras and alarm status tied into your KNX scenes and controls.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div>
+          <h3>Audio &amp; entertainment</h3>
+          <p>Multi-room audio, Sonos and home cinema, controlled alongside lighting and blinds from anywhere.</p>
+        </div>
+        <div class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+          <h3>Repairs &amp; maintenance</h3>
+          <p>Faulty switches, dead sensors, lost ETS projects or changed routines: fixed on site at a fair, straightforward rate.</p>
+        </div>
+      </div>
+      <div class="works">
+        <span class="works-label">Works with</span>
+        <div class="chips">
+        <span class="chip">ETS6</span><span class="chip">Control4</span><span class="chip">Crestron</span><span class="chip">Lutron</span><span class="chip">DALI</span><span class="chip">BACnet</span>
+        <span class="chip">KNX/IP</span><span class="chip">Sonos</span><span class="chip">Alexa</span><span class="chip">Intercom</span>
+        <span class="chip">CCTV</span><span class="chip">ABB</span><span class="chip">Gira</span><span class="chip">MDT</span><span class="chip">Zennio</span>
+      </div>
+      </div>
+      <div class="trade" id="trade">
+        <div>
+          <span class="tag">Installers &amp; integrators</span>
+          <h3>Your KNX programmer, without hiring one.</h3>
+          <p>I program and commission KNX on your installs, by day rate or fixed price.</p>
+          <a class="btn btn-accent" href="#contact">Book me for a job</a>
+        </div>
+        <ul class="ticks">
+            <li>ETS programming and commissioning on site.</li>
+            <li>Board layouts and wiring schedules you can build and terminate to.</li>
+            <li>Pre-programming of devices before they go to site.</li>
+            <li>Fault-finding and rescue of existing installations and ETS projects.</li>
+            <li>Remote support and changes over a secure KNX/IP connection.</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="videos" id="videos">
+    <div class="wrap">
+      <p class="eyebrow">KNX Expert on YouTube</p>
+      <h2>See how I work before you hire me.</h2>
+      <p class="lead">I publish free KNX programming tutorials in ETS, from basic lighting to logic modules. They're a good way to judge my work, and many electricians use them to learn KNX.</p>
+      <div class="chips" style="margin-top:20px"><span class="chip" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)">4,300+ subscribers</span><span class="chip" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)">336,000+ views</span><span class="chip" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)">22 videos</span></div>
+      <div class="vgrid">
+        <a class="vid" href="https://www.youtube.com/watch?v=Vy5O_2JmUW4" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/Vy5O_2JmUW4/hqdefault.jpg')"></div><div class="t">Tutorial 1: Programming basic lighting in ETS6</div></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=AOQnnqn5o6w" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/AOQnnqn5o6w/hqdefault.jpg')"></div><div class="t">Tutorial 5: Blinds and shutters with slats</div></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=Pbnpd1bRY28" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/Pbnpd1bRY28/hqdefault.jpg')"></div><div class="t">Tutorial 4: Programming HVAC</div></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=XGZODCROwj4" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/XGZODCROwj4/hqdefault.jpg')"></div><div class="t">Tutorial 7: DALI</div></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=CiZ1kcpoRio" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/CiZ1kcpoRio/hqdefault.jpg')"></div><div class="t">Tutorial 8: ABB, Zennio and MDT logic modules</div></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=H824v1sRVvc" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('https://i.ytimg.com/vi/H824v1sRVvc/hqdefault.jpg')"></div><div class="t">ABB SKY PIRs in an open-plan area</div></a>
+      </div>
+      <a class="btn btn-accent" href="https://www.youtube.com/@KNX-expert" target="_blank" rel="noopener">All tutorials on YouTube</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="me">
+        <img class="avatar" src="assets/gohar.jpg" alt="Gohar Rashid" width="160" height="160">
+        <p class="eyebrow">About me</p>
+        <h2>Hi, I'm Gohar.</h2>
+        <p>I've worked in building automation in Dubai, Oman and the UK, and now program KNX freelance.</p>
+      </div>
+      <ol class="career">
+        <li><span class="when">2018 – now</span><b>Smart Buildings Project Manager</b><span>Knutsford, Cheshire</span></li>
+        <li><span class="when">2016 – 2018</span><b>KNX Technical Support</b><span>BEMCO, London</span></li>
+        <li><span class="when">2014 – 2016</span><b>Home Automation Engineer</b><span>Muscat, Oman</span></li>
+        <li><span class="when">2013 – 2014</span><b>Audio Visual Engineer</b><span>Dubai</span></li>
+        <li><span class="when">2008 – 2012</span><b>BSc Computer Engineering</b><span>COMSATS, Pakistan</span></li>
+      </ol>
+    </div>
+    <div class="wrap">
+      <div class="why">
+        <div><h3>Certified KNX Partner</h3><p>Trained and certified by the KNX Association, working in the current ETS.</p></div>
+        <div><h3>10+ years of experience</h3><p>Small to large high-end homes and commercial buildings in the UK and abroad.</p></div>
+        <div><h3>Local Cheshire &amp; Manchester service</h3><p>Based in Northwich, on site across Manchester and the North West, with remote support UK-wide.</p></div>
+        <div><h3>Warranty &amp; support</h3><p>Comprehensive warranty on my work, and support after handover whenever you need changes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Get in touch</p>
+        <h2>Tell me about your project.</h2>
+        <p class="lead">Send me the drawings, a rough idea, or the job you need programmed. I'll reply with next steps and a quotation.</p>
+        <p class="steps-line">Free consultation, then a fixed quotation, installation and programming, and handover with your ETS project file.</p>
+        <div class="ways">
+          <a class="way" href="tel:+447446488542"><span>☎</span><span>07446 488542<small>Call</small></span></a>
+          <a class="way" href="https://wa.me/447446488542" target="_blank" rel="noopener"><span>✆</span><span>WhatsApp<small>Message me, including photos or drawings</small></span></a>
+          <a class="way" href="mailto:contact@smartknx.co.uk"><span>✉</span><span>contact@smartknx.co.uk<small>Email, usually answered within a working day</small></span></a>
+          <a class="way" href="https://www.linkedin.com/in/knx-certified-engineer" target="_blank" rel="noopener"><span>in</span><span>LinkedIn<small>Profile and recommendations</small></span></a>
+          <a class="way" href="https://www.youtube.com/@KNX-expert" target="_blank" rel="noopener"><span>▶</span><span>YouTube: KNX Expert<small>Free KNX programming tutorials</small></span></a>
+        </div>
+      </div>
+      <form id="enquiry" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="615a2d90-79bb-4f0a-beb4-af7582857a7c">
+        <input type="hidden" name="from_name" value="SmartKNX website">
+        <input type="hidden" name="subject" value="New enquiry from smartknx.co.uk">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label for="name">Name</label>
+        <input id="name" name="name" required autocomplete="name">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+        <label for="phone">Phone <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+        <label for="who">I am a…</label>
+        <select id="who" name="Enquirer">
+          <option>Homeowner</option>
+          <option>Installer or integrator</option>
+          <option>Developer or architect</option>
+          <option>Commercial client</option>
+        </select>
+        <label for="plan">What are you planning?</label>
+        <select id="plan" name="Project type">
+          <option>Smart home</option>
+          <option>Heating &amp; cooling</option>
+          <option>Lighting and shading</option>
+          <option>Commercial building</option>
+          <option>Repair or maintenance</option>
+          <option>Existing KNX system: changes or upgrade</option>
+          <option>ETS programming for my install</option>
+          <option>Other / not sure yet</option>
+        </select>
+        <label for="msg">Project details</label>
+        <textarea id="msg" name="message" required placeholder="Location, size of the building, what you'd like to control, timescale…"></textarea>
+        <button class="btn btn-accent" type="submit">Send enquiry</button>
+        <p class="note" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> SmartKNX · Gohar Rashid, Freelance KNX Programmer · Northwich &amp; Manchester, UK</span>
+    <span><a href="tel:+447446488542">07446 488542</a> · <a href="https://wa.me/447446488542">WhatsApp</a> · <a href="mailto:contact@smartknx.co.uk">Email</a> · <a href="https://www.linkedin.com/in/knx-certified-engineer">LinkedIn</a> · <a href="https://www.youtube.com/@KNX-expert">YouTube</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  // Web3Forms delivers the enquiry by email; on failure point visitors at phone and email instead.
+  document.getElementById("enquiry").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var f = e.target, btn = f.querySelector("button"), st = document.getElementById("form-status");
+    var data = new FormData(f);
+    data.set("subject", "KNX enquiry from " + f.name.value);
+    data.set("replyto", f.email.value);
+    btn.disabled = true; st.className = "note"; st.textContent = "Sending…";
+    try {
+      var r = await fetch(f.action, { method: "POST", body: data, headers: { Accept: "application/json" } });
+      var j = await r.json();
+      if (!j.success) throw new Error(j.message || "failed");
+      f.reset(); st.className = "note ok"; st.textContent = "Thanks, your message has been sent. I'll reply within a working day.";
+    } catch (err) {
+      st.className = "note err"; st.textContent = "Sorry, that didn't send. Please call 07446 488542 or email contact@smartknx.co.uk.";
+    } finally { btn.disabled = false; }
+  });
+</script>
+</body>
+</html>
